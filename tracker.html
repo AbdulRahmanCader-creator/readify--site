@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Tracker</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images/rfavicon.png">
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="logo-container">
+            <img src="Images/rfavicon.png" alt="Readify Logo" class="nav-logo">
+            <h1>Readify</h1>
+        </div>
+    </a>
+
+<button id="btn-hamb">&#9776;</button>
+
+<div class="hamburger" id="hamburger"></div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="recommender.html">Recommender</a></li>
+        <li><a href="readflow.html">Readflow</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="container">
+        <section class="tracker-card">
+            <h2>Reading Progress Tracker</h2>
+            <p>Enter your details below to see your progress!</p>
+
+            <div class="form-group">
+                <label for="total-pages">Total Pages in Book:</label>
+                <input type="number" id="total-pages" placeholder="e.g., 400">
+            </div>
+
+            <div class="form-group">
+                <label for="pages-read">Pages Already Read:</label>
+                <input type="number" id="pages-read" placeholder="e.g., 150">
+            </div>
+
+            <div class="form-group">
+                <label for="reading-speed">Pages Read Per Day:</label>
+                <input type="number" id="reading-speed" placeholder="e.g., 20">
+            </div>
+
+            <button id="calculate-btn" class="btn-primary">Calculate Progress</button>
+            <button id="save-btn" class="btn-primary">Save Progress</button>
+
+            <div id="results-area" class="results-container" style="display: none;">
+                <h3>Your Results:</h3>
+                <p>Completion: <span id="percent-display">0</span>%</p>
+                
+                <div class="progress-bar-bg">
+                    <div id="progress-fill" class="progress-bar-fill"></div>
+                </div>
+
+                <p>Estimated time to finish: <span id="finish-time">0</span> days</p>
+            </div>
+        </section>
+</main>
+
+    <footer class="footer">
+        <fieldset class="fieldset">
+        <p>&copy; 2025 Readify, Stay curious.</p>
+
+        <div class="newsletter">
+            <h3>Subscribe to our Newsletter</h3><br>
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required >
+            <button onclick="subscribeNewsletter()" class="btn-primary">Subscribe</button>
+            <p id="subscription-msg"></p>
+        </div>
+        </fieldset>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>

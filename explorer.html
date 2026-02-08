@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Explore Books</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images/rfavicon.png">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="logo-container">
+            <img src="Images/rfavicon.png" alt="Readify Logo" class="nav-logo">
+            <h1>Readify</h1>
+        </div>
+    </a>
+
+<button id="btn-hamb">&#9776;</button> 
+
+<div class="hamburger" id="hamburger"></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="recommender.html">Recommender</a></li>
+        <li><a href="readflow.html">Readflow</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+
+</header>
+
+    <main class="explorer-container">
+        <section class="search-area">
+            <h2>Book Explorer</h2>
+            <div class="search-bar">
+                <input type="text" id="book-search" placeholder="Search by title or author...">
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Classic">Classic</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="book-display-grid" class="book-grid">
+        </div>
+    </main>
+
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <fieldset class="fieldset">
+        <p>&copy; 2025 Readify, Stay curious.</p>
+
+        <div class="newsletter">
+            <h3>Subscribe to our Newsletter</h3><br>
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required >
+            <button onclick="subscribeNewsletter()" class="btn-primary">Subscribe</button>
+            <p id="subscription-msg"></p>
+        </div>
+        </fieldset>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
